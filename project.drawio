@@ -1,0 +1,297 @@
+<mxfile host="65bd71144e">
+    <diagram id="I_DS1XFg-G_NrgssDtov" name="Page-1">
+        <mxGraphModel dx="1456" dy="768" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="MUTEX = FORK" style="rounded=0;whiteSpace=wrap;html=1;fillColor=default;strokeColor=default;gradientColor=none;strokeWidth=3;fontFamily=Comic Sans MS;fontStyle=0;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="490" width="190" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;PTHRED = PHILOSOPHER&lt;/font&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=#000000;strokeColor=default;strokeWidth=3;fontFamily=Comic Sans MS;fontColor=default;fillColor=default;gradientColor=none;fontStyle=0;fontSize=14;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="490" width="180" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="Yj6PzlGNbV73_zmHB9ub-5" value="Dijkstra Solution" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#000003;fillColor=default;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="250" y="140" width="200" height="100" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="3hwXVeCPRvOZ4psRc6HH" name="Page-2">
+        <mxGraphModel dx="1456" dy="649" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="a3dISVi7HDv7WBrG3JKw-1" value="&lt;h1&gt;what is a thread ?&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=default;fillColor=default;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="30" width="300" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="a3dISVi7HDv7WBrG3JKw-3" value="" style="endArrow=classic;html=1;fontFamily=Comic Sans MS;fontSize=14;fontColor=default;exitX=0.177;exitY=1.018;exitDx=0;exitDy=0;exitPerimeter=0;strokeWidth=3;rounded=1;" parent="1" source="a3dISVi7HDv7WBrG3JKw-1" target="a3dISVi7HDv7WBrG3JKw-4" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="270" y="390" as="sourcePoint"/>
+                        <mxPoint x="200" y="300" as="targetPoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a3dISVi7HDv7WBrG3JKw-4" value="un Thread a son propre ID, propre STACK, etc..&lt;br&gt;&lt;br&gt;Mais tous les threads font part du meme process, partage le meme code, la meme heap etc..." style="rounded=1;whiteSpace=wrap;html=1;strokeColor=default;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=default;fillColor=default;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="10" y="270" width="290" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="a3dISVi7HDv7WBrG3JKw-5" value="Thread n'ont pas le truc du child comme avec fork.&lt;br&gt;&lt;br&gt;C'est a dire quil ny a pas d'ordre strict, chaque thread peut attendre n'importe quel autre thread." style="rounded=1;whiteSpace=wrap;html=1;strokeColor=default;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=default;fillColor=default;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="310" width="300" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="a3dISVi7HDv7WBrG3JKw-6" value="" style="endArrow=classic;html=1;fontFamily=Comic Sans MS;fontSize=14;fontColor=default;exitX=0.177;exitY=1.018;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.38;entryY=0.008;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=3;" parent="1" target="a3dISVi7HDv7WBrG3JKw-5" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="342.84000000000003" y="199.99999999999994" as="sourcePoint"/>
+                        <mxPoint x="279.9981765903917" y="306.94" as="targetPoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a3dISVi7HDv7WBrG3JKw-7" value="" style="endArrow=classic;html=1;rounded=1;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=default;exitX=0.847;exitY=-0.033;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="a3dISVi7HDv7WBrG3JKw-5" target="a3dISVi7HDv7WBrG3JKw-8" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="640" y="340" as="sourcePoint"/>
+                        <mxPoint x="580" y="200" as="targetPoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a3dISVi7HDv7WBrG3JKw-8" value="N'importe quel thread peut lire ou ecrire dans la meme zone memoire !" style="whiteSpace=wrap;html=1;aspect=fixed;rounded=0;strokeColor=default;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=default;fillColor=default;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="610" y="80" width="170" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="a3dISVi7HDv7WBrG3JKw-15" style="edgeStyle=none;rounded=1;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=default;" parent="1" source="a3dISVi7HDv7WBrG3JKw-10" target="a3dISVi7HDv7WBrG3JKw-11" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="fOGOBDPeUE_XlxM94VHD-1" style="edgeStyle=none;rounded=1;html=1;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#FF8000;" parent="1" source="a3dISVi7HDv7WBrG3JKw-10" target="fOGOBDPeUE_XlxM94VHD-2" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="520" y="530" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a3dISVi7HDv7WBrG3JKw-10" value="&lt;h1&gt;UTILISATION&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=default;fillColor=default;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="170" y="450" width="300" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="a3dISVi7HDv7WBrG3JKw-16" style="edgeStyle=none;rounded=1;html=1;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=default;" parent="1" source="a3dISVi7HDv7WBrG3JKw-11" target="a3dISVi7HDv7WBrG3JKw-17" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="100" y="720" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="100" y="680"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a3dISVi7HDv7WBrG3JKw-11" value="#include &amp;lt;pthread.h&amp;gt;&lt;br&gt;&lt;br&gt;cc -pthread main.c" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=default;fillColor=default;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="650" width="205" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="a3dISVi7HDv7WBrG3JKw-18" style="edgeStyle=none;rounded=1;html=1;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#FF8000;" parent="1" source="a3dISVi7HDv7WBrG3JKw-17" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="170" y="900" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a3dISVi7HDv7WBrG3JKw-46" style="edgeStyle=none;rounded=1;html=1;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#000000;" parent="1" source="a3dISVi7HDv7WBrG3JKw-17" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="360" y="785" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a3dISVi7HDv7WBrG3JKw-49" value="" style="edgeStyle=none;rounded=1;html=1;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#000000;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="a3dISVi7HDv7WBrG3JKw-17" target="a3dISVi7HDv7WBrG3JKw-50" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="390" y="785" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a3dISVi7HDv7WBrG3JKw-52" style="edgeStyle=none;rounded=1;html=1;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#000000;" parent="1" source="a3dISVi7HDv7WBrG3JKw-17" target="a3dISVi7HDv7WBrG3JKw-53" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="490" y="910" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="a3dISVi7HDv7WBrG3JKw-17" value="int &lt;font color=&quot;#ff8000&quot;&gt;pthread_create&lt;/font&gt;(phtread_t* restrict &lt;font color=&quot;#0000ff&quot;&gt;thread&lt;/font&gt;,&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;const pthread_attr_t *restrict &lt;font color=&quot;#0000ff&quot;&gt;attr&lt;/font&gt;,&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt; &lt;/span&gt;&amp;nbsp; void *(&lt;font color=&quot;#0000ff&quot;&gt;*start_routine&lt;/font&gt;)(void *),&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;void *restrict &lt;font color=&quot;#0000ff&quot;&gt;arg&lt;/font&gt;);" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=default;fillColor=default;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="730" width="330" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="a3dISVi7HDv7WBrG3JKw-45" value="&lt;u&gt;thread&lt;/u&gt; = pointer to a variable &quot;pthread_t&quot; type&lt;br&gt;va servir a stocker l'id du thread&lt;br&gt;&lt;u&gt;&lt;br&gt;attr&lt;/u&gt;&amp;nbsp;= argument pour changer les caracteristique par defaut&lt;br&gt;on ne va pas lutiliser donc on met NULL ici&lt;br&gt;&lt;br&gt;&lt;u&gt;start_routine&lt;/u&gt;&amp;nbsp;= la fonction que va utiliser le thread, une fois que le thread arrive au bout de la fonction, la tache du thread sera terminee&lt;br&gt;&lt;br&gt;&lt;u&gt;arg&lt;/u&gt;&amp;nbsp;= un pointeur pour passer une valeur a la fonction routine, si on veut passer plusieurs info, on peut lui envoyer une structure." style="rounded=1;whiteSpace=wrap;html=1;strokeColor=default;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#000000;fillColor=default;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="10" y="900" width="400" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="a3dISVi7HDv7WBrG3JKw-50" value="Retourne 0 si ok&lt;br&gt;Retourne != 0 si erreur" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#000000;fillColor=default;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="740" width="140" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="a3dISVi7HDv7WBrG3JKw-55" style="edgeStyle=none;rounded=1;html=1;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#0000FF;" parent="1" source="a3dISVi7HDv7WBrG3JKw-53" target="a3dISVi7HDv7WBrG3JKw-54" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="a3dISVi7HDv7WBrG3JKw-57" value="" style="edgeStyle=none;rounded=1;html=1;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#0000FF;" parent="1" source="a3dISVi7HDv7WBrG3JKw-53" target="a3dISVi7HDv7WBrG3JKw-56" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="a3dISVi7HDv7WBrG3JKw-53" value="int &lt;font color=&quot;#ff8000&quot;&gt;pthread_join&lt;/font&gt;(pthread_t &lt;font color=&quot;#0000ff&quot;&gt;thread&lt;/font&gt;, void **&lt;font color=&quot;#0000ff&quot;&gt;retval&lt;/font&gt;);&lt;br&gt;&lt;br&gt;&lt;u&gt;thread&lt;/u&gt;&amp;nbsp;= ID of the thread que lon veut attendre&lt;br&gt;il ne doit pas etre &lt;u&gt;detached&lt;br&gt;&lt;/u&gt;&lt;br&gt;&lt;u&gt;retval&lt;/u&gt;&amp;nbsp;= un pointeur to la valeur de retour de la fonction routine&lt;br&gt;mais nous allons toujours mettre NULL" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#000000;fillColor=default;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="470" y="900" width="380" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="a3dISVi7HDv7WBrG3JKw-54" value="Retourne 0 si ok&lt;br&gt;Retourne != 0 si erreur" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#000000;fillColor=default;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="625" y="790" width="140" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="a3dISVi7HDv7WBrG3JKw-56" value="le thread principal donc le programme par defaut, se bloque arriver a pthread_join, et rien ne sera executer tant que le thread avec le bon id sera arriver a cette fonction.&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#000000;fillColor=default;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="890" y="900" width="420" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="fOGOBDPeUE_XlxM94VHD-2" value="Warning!!:&lt;br&gt;&lt;br&gt;Bien penser a exec plusieurs fois un meme program pour eviter de se faire surprendre !" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=default;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#FF8000;fillColor=default;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="530" y="450" width="230" height="130" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="A0StyBsrmpPDB5ZH_qPQ" name="Page-3">
+        <mxGraphModel dx="1456" dy="768" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="iOMpC9NnGdhOEg__8W2E-2" style="edgeStyle=none;rounded=1;html=1;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#0000FF;" parent="1" source="iOMpC9NnGdhOEg__8W2E-1" target="iOMpC9NnGdhOEg__8W2E-3" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="120" y="160" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="120" y="80"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="iOMpC9NnGdhOEg__8W2E-1" value="&lt;h1&gt;DATA RACES&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#0000FF;fillColor=default;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="20" width="390" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="iOMpC9NnGdhOEg__8W2E-4" style="edgeStyle=none;rounded=1;html=1;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#0000FF;" parent="1" source="iOMpC9NnGdhOEg__8W2E-3" target="iOMpC9NnGdhOEg__8W2E-5" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="370" y="180" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="iOMpC9NnGdhOEg__8W2E-3" value="Vu que les Threads sont executer en meme temps ( donc en parrallele), ils peuvent tenter daccerder a la meme zone memoire en meme temps. et donc de modifier simultanement la memoire.&lt;br&gt;&lt;br&gt;cela donne des resutlats aleatoire et donc faux!" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#0000FF;fillColor=default;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="160" width="280" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="iOMpC9NnGdhOEg__8W2E-5" value="&lt;font color=&quot;#ff8000&quot;&gt;cc - fsanitize=thread prog.c&lt;br&gt;&lt;/font&gt;Flag , display specific files and line involved&lt;br&gt;&lt;font color=&quot;#ff8000&quot;&gt;valgrind --tool=helgrind ./philo&lt;br&gt;&lt;/font&gt;thread error detection&lt;br&gt;&lt;font color=&quot;#ff8000&quot;&gt;valgrind --tool=drd&lt;br&gt;&lt;/font&gt;same&lt;br&gt;ne pas utiliser valgrind et fsanitize en meme temps" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#0000FF;fillColor=default;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="340" y="149" width="380" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="iOMpC9NnGdhOEg__8W2E-8" style="edgeStyle=none;rounded=1;html=1;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#0000FF;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="iOMpC9NnGdhOEg__8W2E-7" target="iOMpC9NnGdhOEg__8W2E-9" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="80" y="440" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="80" y="360"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="iOMpC9NnGdhOEg__8W2E-7" value="&lt;h1&gt;MUTEX&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#0000FF;fillColor=default;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="300" width="390" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="iOMpC9NnGdhOEg__8W2E-11" value="" style="edgeStyle=none;rounded=1;html=1;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#0000FF;" parent="1" source="iOMpC9NnGdhOEg__8W2E-9" target="iOMpC9NnGdhOEg__8W2E-10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="iOMpC9NnGdhOEg__8W2E-9" value="&lt;u&gt;mutual exclusion&lt;/u&gt;&lt;br&gt;&lt;br&gt;cest un locker pour reguler l'acces aux donnees et palier au probleme des donnees utilisees en meme temps" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#0000FF;fillColor=default;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="440" width="310" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="iOMpC9NnGdhOEg__8W2E-10" value="On peut imaginer ca comme une porte de toilette qui nous dit que cest occupe, lautre thread naura qua attendre que la porte soit de nouveau accecible avant de pouvoir y rentrer." style="whiteSpace=wrap;html=1;fontSize=14;fontFamily=Comic Sans MS;fontColor=#0000FF;rounded=0;strokeWidth=3;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="390" y="440" width="290" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="iOMpC9NnGdhOEg__8W2E-14" style="edgeStyle=none;rounded=1;html=1;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#000000;" parent="1" source="iOMpC9NnGdhOEg__8W2E-13" target="iOMpC9NnGdhOEg__8W2E-15" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="240" y="655" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="iOMpC9NnGdhOEg__8W2E-13" value="&lt;font color=&quot;#000000&quot;&gt;variable&lt;/font&gt;&lt;font color=&quot;#ff8000&quot;&gt;:&lt;br&gt;pthread_mutex_t&lt;/font&gt;&lt;font color=&quot;#000003&quot;&gt; mutex;&lt;br&gt;&lt;br&gt;init:&lt;br&gt;int &lt;/font&gt;&lt;font color=&quot;#ff8000&quot;&gt;pthread_mutex_init&lt;/font&gt;&lt;font color=&quot;#000003&quot;&gt;(pthread_mutex_t *&lt;/font&gt;mutex&lt;font color=&quot;#000003&quot;&gt;,&lt;br&gt;const phtread_mutexattr_t *&lt;/font&gt;mutexattr&lt;font color=&quot;#000003&quot;&gt;);&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=default;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#0000FF;fillColor=default;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="580" width="320" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="iOMpC9NnGdhOEg__8W2E-15" value="&lt;u&gt;mutex&lt;/u&gt;&amp;nbsp;= pointeur vers une variable de type mutex&lt;br&gt;&lt;br&gt;&lt;u&gt;mutexattr&lt;/u&gt;&amp;nbsp;= pointeur specifique attribut mais on met NULL" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=default;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#000000;fillColor=default;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="600" width="250" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="iOMpC9NnGdhOEg__8W2E-19" value="" style="edgeStyle=none;rounded=1;html=1;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#FF8000;" parent="1" source="iOMpC9NnGdhOEg__8W2E-17" target="iOMpC9NnGdhOEg__8W2E-18" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="iOMpC9NnGdhOEg__8W2E-20" style="edgeStyle=none;rounded=1;html=1;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#FF8000;entryX=0.092;entryY=-0.017;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="iOMpC9NnGdhOEg__8W2E-17" target="iOMpC9NnGdhOEg__8W2E-22" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="528.9056939501779" y="900" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="iOMpC9NnGdhOEg__8W2E-17" value="int &lt;font color=&quot;#ff8000&quot;&gt;pthread_mutex_lock&lt;/font&gt;(phtead_mutex_t *&lt;font color=&quot;#0000ff&quot;&gt;mutex&lt;/font&gt;));&lt;br&gt;&lt;br&gt;int &lt;font color=&quot;#ff8000&quot;&gt;pthread_mutex_unlock&lt;/font&gt;(phtead_mutex_t *&lt;font color=&quot;#0000ff&quot;&gt;mutex&lt;/font&gt;));&lt;br&gt;&lt;br&gt;return 0 if succes&lt;br&gt;return != 0 if error" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=default;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#000000;fillColor=default;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="189" y="749" width="341" height="121" as="geometry"/>
+                </mxCell>
+                <mxCell id="iOMpC9NnGdhOEg__8W2E-18" value="faire attention a bien les placer car nous ne devons pas unlock un mutex qui est deja unlock sinon nous allons avoir une erreur de type: lock order violation" style="whiteSpace=wrap;html=1;fontSize=14;fontFamily=Comic Sans MS;fontColor=#000000;rounded=1;strokeWidth=3;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="890" width="270" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="iOMpC9NnGdhOEg__8W2E-22" value="&lt;font color=&quot;#000000&quot;&gt;Quand nous n'avons plus besoin dun mutex nous devons le DESTROY&lt;br&gt;&lt;br&gt;int &lt;/font&gt;pthread_mutex_destroy&lt;font color=&quot;#000000&quot;&gt;(phtread_mutex_t *&lt;/font&gt;&lt;font color=&quot;#0000ff&quot;&gt;mutex&lt;/font&gt;&lt;font color=&quot;#000000&quot;&gt;);&lt;br&gt;&lt;br&gt;cette fonction destroy un mutex qui est &lt;u&gt;unlock&lt;/u&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=default;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#FF8000;fillColor=default;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="490" y="890" width="340" height="150" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="z7W62fQO4n6KU30_JUny" name="Page-4">
+        <mxGraphModel dx="1456" dy="649" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="1fpCq-4p-TqDPE5JmD2B-2" style="edgeStyle=none;rounded=1;html=1;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#FF8000;" parent="1" source="1fpCq-4p-TqDPE5JmD2B-1" target="1fpCq-4p-TqDPE5JmD2B-6" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="80" y="160" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="80" y="80"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="1fpCq-4p-TqDPE5JmD2B-1" value="&lt;h1&gt;DEADLOCKS&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#0000FF;fillColor=default;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="190" y="20" width="390" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="1fpCq-4p-TqDPE5JmD2B-9" style="edgeStyle=none;rounded=1;html=1;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#FF8000;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="1fpCq-4p-TqDPE5JmD2B-6" target="1fpCq-4p-TqDPE5JmD2B-13" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="410" y="190" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="330" y="260"/>
+                            <mxPoint x="350" y="240"/>
+                            <mxPoint x="360" y="260"/>
+                            <mxPoint x="320" y="190"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="1fpCq-4p-TqDPE5JmD2B-10" style="edgeStyle=none;rounded=1;html=1;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#FF8000;" parent="1" source="1fpCq-4p-TqDPE5JmD2B-6" target="1fpCq-4p-TqDPE5JmD2B-11" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="390" y="330" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="1fpCq-4p-TqDPE5JmD2B-6" value="&lt;font color=&quot;#000000&quot;&gt;Impasse en FR, situation ou deux threads ne peuvent pas continuer car ils attendent tous les deux une ressource detenue par un autre process&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=default;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#FF8000;fillColor=default;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="10" y="180" width="300" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="1fpCq-4p-TqDPE5JmD2B-11" value="&lt;font color=&quot;#0f0800&quot;&gt;P1 detient la ressource B&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#FF8000;fillColor=default;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="350" y="280" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="1fpCq-4p-TqDPE5JmD2B-14" style="edgeStyle=none;rounded=1;html=1;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#FF8000;" parent="1" source="1fpCq-4p-TqDPE5JmD2B-13" target="1fpCq-4p-TqDPE5JmD2B-15" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="550" y="240" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="1fpCq-4p-TqDPE5JmD2B-13" value="&lt;font color=&quot;#000003&quot;&gt;P2 detient la ressource A&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#FF8000;fillColor=default;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="140" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="1fpCq-4p-TqDPE5JmD2B-15" value="&lt;font color=&quot;#0f0f0f&quot;&gt;vu que pour pouvoir continuer ils doivent avoir acces a la ressource de lautre, ils ne peuvent continuer et donc cela va creer un conflit ( deadlocks)&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#FF8000;fillColor=default;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="550" y="190" width="230" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="RcdMUooPpDiqv7ciCCqn-1" value="PROBLEMS:&lt;br&gt;&lt;br&gt;DEADLOCKS:&lt;br&gt;si chaque philo prend chacun une fourchette, alors personne ne pourra manger et ils vont mourir.&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;strokeWidth=3;fontFamily=Comic Sans MS;fontSize=14;fontColor=#000003;fillColor=default;gradientColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="360" width="690" height="130" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="pDeYL2kTflsUeqaLvxGD" name="Page-5">
+        <mxGraphModel dx="1456" dy="768" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="BRoIhbdSfR6Hc26PBU1b-1" value="" style="ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+                    <mxGeometry x="270" y="140" width="260" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="BRoIhbdSfR6Hc26PBU1b-3" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+                    <mxGeometry x="380" y="60" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="BRoIhbdSfR6Hc26PBU1b-4" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+                    <mxGeometry x="550" y="230" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="BRoIhbdSfR6Hc26PBU1b-5" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+                    <mxGeometry x="385" y="400" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="BRoIhbdSfR6Hc26PBU1b-6" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+                    <mxGeometry x="230" y="230" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="BRoIhbdSfR6Hc26PBU1b-8" value="" style="shape=mxgraph.signs.food.restaurant_1;html=1;pointerEvents=1;fillColor=#000000;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;align=center;sketch=0;" vertex="1" parent="1">
+                    <mxGeometry x="300" y="330" width="40" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="BRoIhbdSfR6Hc26PBU1b-9" value="" style="shape=mxgraph.signs.food.restaurant_1;html=1;pointerEvents=1;fillColor=#000000;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;align=center;sketch=0;" vertex="1" parent="1">
+                    <mxGeometry x="470" y="330" width="40" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="BRoIhbdSfR6Hc26PBU1b-10" value="" style="shape=mxgraph.signs.food.restaurant_1;html=1;pointerEvents=1;fillColor=#000000;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;align=center;sketch=0;" vertex="1" parent="1">
+                    <mxGeometry x="450" y="170" width="40" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="BRoIhbdSfR6Hc26PBU1b-11" value="" style="shape=mxgraph.signs.food.restaurant_1;html=1;pointerEvents=1;fillColor=#000000;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;align=center;sketch=0;" vertex="1" parent="1">
+                    <mxGeometry x="300" y="170" width="40" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: azbk <azbk@student.42.fr>                  +#+  +:+       +#+         #
+#    By: emauduit <emauduit@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/05 10:51:20 by azbk              #+#    #+#              #
-#    Updated: 2024/03/05 10:53:49 by azbk             ###   ########.fr        #
+#    Updated: 2024/04/02 16:43:25 by emauduit         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,9 +30,10 @@ SRC_DIR = ./src
 #                                  SOURCES                                     #
 ################################################################################
 
-SRC := main.c \
+SRC := free_function.c \
+		main.c \
 		init.c \
-		utils.c
+		utils_parsing.c
 
 SRC := $(addprefix $(SRC_DIR)/, $(SRC))
 
