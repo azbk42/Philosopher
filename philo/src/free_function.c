@@ -6,7 +6,7 @@
 /*   By: emauduit <emauduit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 16:42:48 by emauduit          #+#    #+#             */
-/*   Updated: 2024/04/02 17:59:47 by emauduit         ###   ########.fr       */
+/*   Updated: 2024/04/09 11:32:32 by emauduit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ void free_data(t_data *data)
         pthread_mutex_destroy(&data->forks[i]);
         i++;
     }
+    pthread_mutex_destroy(&data->arg->is_dead_mutex);
     free(data->forks);
     free(data->thread);
     free(data->philosophe);

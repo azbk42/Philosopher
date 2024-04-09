@@ -6,13 +6,13 @@
 /*   By: emauduit <emauduit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 10:48:59 by azbk              #+#    #+#             */
-/*   Updated: 2024/04/02 17:53:49 by emauduit         ###   ########.fr       */
+/*   Updated: 2024/04/09 15:06:18 by emauduit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/philosopher.h"
 
-static void	fill_arg(t_argument *arg, char **av)
+static int	fill_arg(t_argument *arg, char **av)
 {
 	arg->nb_philo = ft_atoi(av[1]);
 	arg->time_to_die = ft_atoi(av[2]);
@@ -22,6 +22,22 @@ static void	fill_arg(t_argument *arg, char **av)
 		arg->nb_time_eat = ft_atoi(av[5]);
 	else
 		arg->nb_time_eat = 0;
+    arg->is_dead = false;
+    arg->state_eat = false;
+    if (pthread_mutex_init(&arg->is_dead_mutex, NULL) != 0)
+    {
+        write(2, "Error: mutex init is_dead_mutex failed\n", 40);
+        return (ERROR); 
+    }
+    if (av[5])
+    {
+        if (pthread_mutex_init(&arg->state_eat_mutex, NULL) != 0)
+        {
+            write(2, "Error: mutex init state_eat_mutex failed\n", 42);
+            return (ERROR); 
+        }
+    }
+    return (SUCCESS);
 }
 
 int	init_arg(t_argument *arg, char **av)
@@ -32,7 +48,8 @@ int	init_arg(t_argument *arg, char **av)
 		write(2, "You should have only number and positive number\n", 51);
 		return (ERROR_ARGS);
 	}
-	fill_arg(arg, av);
+	if (fill_arg(arg, av) == ERROR)
+        return (ERROR);
 	if (arg->nb_philo == -1 || arg->time_to_die == -1
 		|| arg->time_to_eat == -1 || arg->time_to_sleep == -1
 		|| arg->nb_time_eat == -1)
@@ -76,18 +93,18 @@ int init_data(t_argument *arg, t_data *data)
 }
 static void fill_philo(t_data *data, int i)
 {
-    data->philosophe[i].nb_time_eat = 0;
+    data->philosophe[i].nb_eat = 0;
     data->philosophe[i].id = i+1;
     data->philosophe[i].arg = data->arg;
     if (i == data->arg->nb_philo -1)
     {
-        data->philosophe[i].fork_left = &data->forks[0];
-        data->philosophe[i].fork_right = &data->forks[i];
+        data->philosophe[i].fork_right = &data->forks[0];
+        data->philosophe[i].fork_left = &data->forks[i];
     }
     else
     {
-        data->philosophe[i].fork_left = &data->forks[i];
-        data->philosophe[i].fork_right = &data->forks[i + 1];
+        data->philosophe[i].fork_right = &data->forks[i];
+        data->philosophe[i].fork_left = &data->forks[i + 1];
     }
     if (i == data->arg->nb_philo -1)
     {
@@ -96,8 +113,8 @@ static void fill_philo(t_data *data, int i)
     }
     else
     {
-        data->philosophe[i].fork_left_id = i+1;
-        data->philosophe[i].fork_right_id = i + 2;
+        data->philosophe[i].fork_left_id = i+2;
+        data->philosophe[i].fork_right_id = i +1;
     }
 }
 
@@ -116,14 +133,6 @@ int init_philo(t_data *data)
     while (i < data->arg->nb_philo)
     {
         fill_philo(data, i);
-        i++;
-    }
-    i = 0;
-    while (i < data->arg->nb_philo)
-    {
-        printf("philo %d\n", data->philosophe[i].id);
-        printf("fork_left %d\n", data->philosophe[i].fork_left_id);
-        printf("fork_right %d\n", data->philosophe[i].fork_right_id);
         i++;
     }
     return (SUCCESS);

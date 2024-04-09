@@ -6,7 +6,7 @@
 #    By: emauduit <emauduit@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/05 10:51:20 by azbk              #+#    #+#              #
-#    Updated: 2024/04/02 16:43:25 by emauduit         ###   ########.fr        #
+#    Updated: 2024/04/09 14:38:50 by emauduit         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,9 +30,11 @@ SRC_DIR = ./src
 #                                  SOURCES                                     #
 ################################################################################
 
-SRC := free_function.c \
+SRC := check_state.c \
+		free_function.c \
 		main.c \
 		init.c \
+		time.c \
 		utils_parsing.c
 
 SRC := $(addprefix $(SRC_DIR)/, $(SRC))
