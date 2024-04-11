@@ -6,7 +6,7 @@
 #    By: emauduit <emauduit@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/05 10:51:20 by azbk              #+#    #+#              #
-#    Updated: 2024/04/09 14:38:50 by emauduit         ###   ########.fr        #
+#    Updated: 2024/04/11 18:53:35 by emauduit         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,9 +31,13 @@ SRC_DIR = ./src
 ################################################################################
 
 SRC := check_state.c \
+		fill_init.c \
 		free_function.c \
+		is_doing.c \
 		main.c \
 		init.c \
+		monitor.c \
+		routine.c \
 		time.c \
 		utils_parsing.c
 

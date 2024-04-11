@@ -52,6 +52,8 @@ struct						s_argument
 	bool					state_eat;
 	bool					is_dead;
 	pthread_mutex_t			state_eat_mutex;
+	pthread_mutex_t			nb_eat_mutex;
+	pthread_mutex_t			last_eat_mutex;
 	pthread_mutex_t			is_dead_mutex;
 };
 
@@ -65,7 +67,6 @@ struct						s_philosophe
 	int						fork_right_id;
 	int						nb_eat;
 	unsigned long			last_eat;
-
 };
 
 struct						s_data
@@ -85,21 +86,54 @@ struct						s_data
 
 int							check_is_dead(t_philosophe *philo);
 int							check_nb_eat(t_philosophe *philo);
+void						ft_update_nb_eat(t_philosophe *philo);
+
+/* ************************************************************************** */
+/*                                  FILL_ARG                                  */
+/* ************************************************************************** */
+
+int							fill_arg(t_argument *arg, char **av);
+void						fill_philo(t_data *data, int i);
 
 /* ************************************************************************** */
 /*                                  FREE_FUNCTION                             */
 /* ************************************************************************** */
 
 int							free_error_init(pthread_t *thread,
-								pthread_mutex_t *forks, int i);
+								pthread_mutex_t *forks, int i, t_data *data);
 void						free_data(t_data *data);
+void						free_mutex(t_data *data);
 
 /* ************************************************************************** */
 /*                                 INITIALISATION                             */
 /* ************************************************************************** */
+
 int							init_arg(t_argument *philo, char **av);
 int							init_data(t_argument *philo, t_data *data);
 int							init_philo(t_data *data);
+
+/* ************************************************************************** */
+/*                                     IS_DOING                               */
+/* ************************************************************************** */
+
+int							ft_fork_right(t_philosophe *philo);
+int							ft_fork_left(t_philosophe *philo);
+void						ft_is_eating(t_philosophe *philo);
+int							ft_is_spleeping(t_philosophe *philo);
+void						ft_is_thinking(t_philosophe *philo);
+
+/* ************************************************************************** */
+/*                                     MONITOR                                */
+/* ************************************************************************** */
+
+void						*monitor_die(void *arg);
+void						monitor_nb_eat(t_data *data);
+
+/* ************************************************************************** */
+/*                                     ROUTINE                                */
+/* ************************************************************************** */
+
+void						*eat_routine(void *arg);
 
 /* ************************************************************************** */
 /*                                     TIME                                   */

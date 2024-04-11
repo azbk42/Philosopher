@@ -6,7 +6,7 @@
 /*   By: emauduit <emauduit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 14:38:20 by emauduit          #+#    #+#             */
-/*   Updated: 2024/04/09 16:20:15 by emauduit         ###   ########.fr       */
+/*   Updated: 2024/04/11 18:44:05 by emauduit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,10 @@ int check_nb_eat(t_philosophe *philo)
         pthread_mutex_unlock(&philo->arg->state_eat_mutex);
     }
     return (ERROR);
+}
+void ft_update_nb_eat(t_philosophe *philo)
+{
+    pthread_mutex_lock(&philo->arg->nb_eat_mutex);
+    philo->nb_eat++;
+    pthread_mutex_unlock(&philo->arg->nb_eat_mutex);
 }
