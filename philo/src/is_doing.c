@@ -6,7 +6,7 @@
 /*   By: emauduit <emauduit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 18:42:03 by emauduit          #+#    #+#             */
-/*   Updated: 2024/04/11 18:44:23 by emauduit         ###   ########.fr       */
+/*   Updated: 2024/04/11 19:41:25 by emauduit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@
 int ft_fork_right(t_philosophe *philo)
 {
     pthread_mutex_lock(philo->fork_right);
+    if (philo->arg->nb_philo == 1)
+    {
+        ft_usleep(philo->arg->time_to_die);
+    }
     if (check_is_dead(philo) == SUCCESS)
     {
         pthread_mutex_unlock(philo->fork_right);

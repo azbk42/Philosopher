@@ -6,7 +6,7 @@
 /*   By: emauduit <emauduit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 18:08:16 by emauduit          #+#    #+#             */
-/*   Updated: 2024/04/11 18:45:09 by emauduit         ###   ########.fr       */
+/*   Updated: 2024/04/11 19:28:24 by emauduit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ void	*eat_routine(void *arg)
 		if (check_is_dead(philo) == SUCCESS)
 			break ;
 		ft_is_thinking(philo);
+		if (philo->arg->nb_philo % 2 != 0)
+			ft_usleep(10);
 	}
 	return (NULL);
 }
